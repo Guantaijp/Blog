@@ -16,3 +16,24 @@ for(let i=0; i<indicatorImages.length; i++){
     slides[id].classList.add("active");
   })
 }
+
+
+let sendBtn = document.getElementById("sendBtn");
+sendBtn.addEventListener("click", function(e){
+ e.preventDefault();
+  let planePath = sendBtn.querySelector(".circle");
+  let planeIcon = sendBtn.querySelector(".plane-icon");
+
+  planePath.classList.add("rotateCircle");
+  planeIcon.classList.add("hide");
+
+  setTimeout(function(){
+    planePat.classList.add("hide");
+    planeIcon.classList.remove("rotateCircle");
+  }, 2750);
+
+  setTimeout(function(){
+    sendBtn.classList.add("checked");
+    sendBtn.innerHTML= "Sent";
+  }, 3000);
+});
